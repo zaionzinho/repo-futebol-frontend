@@ -1,0 +1,138 @@
+.app { max-width: 900px; margin: 0 auto; padding: 0 1rem 2rem; }
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 0 1rem;
+  border-bottom: 1px solid #1e293b;
+}
+.logo { font-size: 2rem; }
+.header h1 { font-size: 1.5rem; color: #4ade80; font-weight: 700; }
+
+.nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+.nav button {
+  padding: 0.5rem 1.25rem;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #94a3b8;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: all 0.15s;
+}
+.nav button.ativo, .nav button:hover {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+}
+
+.main { padding-top: 0.5rem; }
+.loading { color: #94a3b8; padding: 2rem 0; text-align: center; }
+.erro { color: #f87171; background: #1e0a0a; padding: 0.75rem 1rem; border-radius: 6px; margin-bottom: 1rem; }
+
+/* Cards */
+.card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.card-titulo { font-size: 1.05rem; font-weight: 600; }
+.card-sub { font-size: 0.82rem; color: #94a3b8; margin-top: 0.2rem; }
+
+.btns { display: flex; gap: 0.4rem; }
+.btn {
+  padding: 0.3rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+.btn:hover { opacity: 0.85; }
+.btn-edit { background: #0ea5e9; color: #fff; }
+.btn-del { background: #ef4444; color: #fff; }
+.btn-add {
+  background: #16a34a;
+  color: #fff;
+  padding: 0.55rem 1.25rem;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Formulário modal simples */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+.modal {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 440px;
+}
+.modal h2 { font-size: 1.1rem; margin-bottom: 1rem; color: #4ade80; }
+.campo { margin-bottom: 0.85rem; }
+.campo label { display: block; font-size: 0.82rem; color: #94a3b8; margin-bottom: 0.3rem; }
+.campo input, .campo select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background: #0f172a;
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+.campo input:focus, .campo select:focus {
+  outline: none;
+  border-color: #16a34a;
+}
+.modal-btns { display: flex; gap: 0.5rem; justify-content: flex-end; margin-top: 1rem; }
+.btn-salvar { background: #16a34a; color: #fff; padding: 0.5rem 1.25rem; border: none; border-radius: 6px; font-weight: 600; font-size: 0.92rem; }
+.btn-cancelar { background: #334155; color: #f1f5f9; padding: 0.5rem 1.25rem; border: none; border-radius: 6px; font-weight: 600; font-size: 0.92rem; }
+
+/* Placar */
+.placar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+.placar-num { color: #4ade80; }
+
+/* Badge status */
+.badge {
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.badge-agendada { background: #1e3a5f; color: #60a5fa; }
+.badge-em-andamento { background: #3f2a00; color: #fbbf24; }
+.badge-encerrada { background: #14291b; color: #4ade80; }
+
+/* Estatísticas */
+.stats { display: flex; gap: 1rem; margin-top: 0.5rem; font-size: 0.82rem; color: #94a3b8; }
+.stat span { color: #f1f5f9; font-weight: 600; }
